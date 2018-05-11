@@ -1,18 +1,19 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-import styles from './style.block.css';
-import objstr from 'obj-str';
+import styles from './index.block.css';
 
-const className = objstr({
-    [styles]: true
-});
+import A from './components/A';
 
 const root = document.createElement('div');
 root.classList.add('root');
 document.body.appendChild(root);
 
 ReactDOM.render(
-    <div className={style}/>,
+    (
+        <div className={styles}>
+            <A/>
+        </div>
+    ),
     root
 );
